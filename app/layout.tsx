@@ -34,7 +34,7 @@ export default function RootLayout({
   const year = new Date().getFullYear();
 
   return (
-    <html lang="en">
+    <html lang="zh-CN">
       <body className={`${bodyFont.variable} ${headingFont.variable}`}>
         <header className="site-header">
           <div className="shell site-header__inner">
@@ -44,9 +44,9 @@ export default function RootLayout({
             </Link>
 
             <nav className="nav" aria-label="Primary">
-              <Link href="/">Home</Link>
-              <Link href="/blog">Blog</Link>
-              <Link href="/resume">Resume</Link>
+              <Link href="/">首页</Link>
+              <Link href="/blog">博客</Link>
+              <Link href="/resume">简历</Link>
             </nav>
           </div>
         </header>
@@ -61,7 +61,7 @@ export default function RootLayout({
                 {link.label}
               </a>
             ))}
-            <a href={`mailto:${siteConfig.email}`}>Email</a>
+            <a href={`mailto:${siteConfig.email}`}>邮箱</a>
           </div>
         </footer>
       </body>
