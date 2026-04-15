@@ -22,7 +22,7 @@ export default function HomePage() {
 
         <div className="hero-actions">
           <Link href="/resume" className="button">
-            查看简历
+            关于我
           </Link>
           <Link href="/blog" className="button-secondary">
             阅读博客

@@ -46,7 +46,7 @@ export default function RootLayout({
             <nav className="nav" aria-label="Primary">
               <Link href="/">首页</Link>
               <Link href="/blog">博客</Link>
-              <Link href="/resume">简历</Link>
+              <Link href="/resume">关于我</Link>
             </nav>
           </div>
         </header>
