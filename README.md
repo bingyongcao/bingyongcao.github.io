@@ -27,6 +27,26 @@ The site uses the Next.js App Router and exports static files into `out/` when y
 2. Add frontmatter with `title`, `summary`, and `date`.
 3. Write the post body in markdown.
 
+### Add an image and description to a post
+
+1. Put the image file in `public/posts/`, for example `public/posts/model-review.png`.
+2. Reference it in the markdown post with an absolute path starting from `/posts/`.
+3. Add a normal paragraph immediately below the image to use it as the image description or caption.
+
+Example:
+
+```md
+![test](/posts/pexels-nano71-31264085.jpg)
+
+[源自Pexels Hao Liang](https://www.pexels.com/zh-cn/photo/31264085/)
+```
+
+Notes:
+
+- Supported image types include `png`, `jpg`, `jpeg`, `webp`, `gif`, and `svg`.
+- The line directly below the image is styled as a caption on the blog post page.
+- Keep image files reasonably compressed because the site is exported as static files.
+
 ### Update the resume
 
 Edit `data/resume.ts` and replace the placeholder entries with your own experience, education, and skills.

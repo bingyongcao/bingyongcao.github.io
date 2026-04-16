@@ -158,7 +158,7 @@ img {
 .hero h1 {
   max-width: 14ch;
   font-size: clamp(3rem, 8vw, 5.75rem);
-  line-height: 0.92;
+  line-height: 1.08;
 }
 
 .hero p,
@@ -418,6 +418,26 @@ img {
   border-radius: var(--radius-sm);
   background: #16332f;
   color: #f7f1e7;
+}
+
+.post-body img {
+  width: 100%;
+  height: auto;
+  margin: 1.5rem 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.post-body p:has(> img) {
+  margin-bottom: 0.5rem;
+}
+
+.post-body p:has(> img) + p {
+  margin-top: 0;
+  color: var(--muted);
+  font-size: 0.94rem;
+  text-align: center;
 }
 
 .resume-layout {

@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 
 import { resumeData } from '../../data/resume';
-import { siteConfig } from '../../data/site';
 
 export const metadata: Metadata = {
   title: 'Resume | Bingyong Cao',
@@ -13,7 +12,7 @@ export default function ResumePage() {
     <section className="section">
       <header className="resume-header">
         <div className="eyebrow">Resume</div>
-        <h1>{siteConfig.name}</h1>
+        <h1>曹炳勇</h1>
         <p className="lede">{resumeData.summary}</p>
       </header>
 

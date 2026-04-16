@@ -15,10 +15,6 @@ export default function BlogPage() {
     <section className="section">
       <header className="post-header">
         <div className="eyebrow">Blog</div>
-        <h1>Writing and working notes.</h1>
-        <p className="lede">
-          Add posts in <code>content/posts</code>. Each markdown file becomes a statically generated page on build.
-        </p>
       </header>
 
       <div className="post-list">
