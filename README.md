@@ -24,8 +24,23 @@ The site uses the Next.js App Router and exports static files into `out/` when y
 ### Add a blog post
 
 1. Create a new markdown file in `content/posts/`.
-2. Add frontmatter with `title`, `summary`, and `date`.
+2. Add frontmatter with `title`, `summary`, and `date`. You can also add `category` and either `keywords` or `keyword` for blog taxonomy.
 3. Write the post body in markdown.
+
+Example frontmatter:
+
+```md
+---
+title: "Launching a personal site that stays easy to maintain"
+summary: "Why this site uses markdown for writing and structured data for resume updates."
+date: "2026/4/13"
+category: "Site notes"
+keywords:
+	- markdown
+	- resume
+	- GitHub Pages
+---
+```
 
 ### Add an image and description to a post
 

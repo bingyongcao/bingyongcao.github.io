@@ -12,11 +12,16 @@ type Frontmatter = {
   title: string;
   summary: string;
   date: string;
+  category?: string;
+  keyword?: string | string[];
+  keywords?: string | string[];
 };
 
 export type PostSummary = Frontmatter & {
   slug: string;
   readingTime: string;
+  category?: string;
+  keywords: string[];
 };
 
 export type PostDetail = PostSummary & {
@@ -27,6 +32,24 @@ function getReadingTime(markdown: string): string {
   const wordCount = markdown.trim().split(/\s+/).filter(Boolean).length;
   const minutes = Math.max(1, Math.ceil(wordCount / WORDS_PER_MINUTE));
   return `${minutes} min read`;
+}
+
+function normalizeKeywords(value: Frontmatter['keyword'] | Frontmatter['keywords']): string[] {
+  const rawKeywords = Array.isArray(value) ? value : [value];
+
+  return rawKeywords
+    .filter((keyword): keyword is string => typeof keyword === 'string')
+    .map((keyword) => keyword.trim())
+    .filter(Boolean);
+}
+
+function normalizeCategory(value: Frontmatter['category']): string | undefined {
+  if (typeof value !== 'string') {
+    return undefined;
+  }
+
+  const category = value.trim();
+  return category || undefined;
 }
 
 function getPostFilePaths(): string[] {
@@ -49,6 +72,8 @@ export function getAllPosts(): PostSummary[] {
         title: frontmatter.title,
         summary: frontmatter.summary,
         date: frontmatter.date,
+        category: normalizeCategory(frontmatter.category),
+        keywords: normalizeKeywords(frontmatter.keywords ?? frontmatter.keyword),
         readingTime: getReadingTime(content),
       };
     })
@@ -72,6 +97,8 @@ export async function getPostBySlug(slug: string): Promise<PostDetail | undefine
     title: frontmatter.title,
     summary: frontmatter.summary,
     date: frontmatter.date,
+    category: normalizeCategory(frontmatter.category),
+    keywords: normalizeKeywords(frontmatter.keywords ?? frontmatter.keyword),
     readingTime: getReadingTime(content),
     contentHtml: processedContent.toString(),
   };

@@ -373,6 +373,75 @@ img {
   gap: 1rem;
 }
 
+.blog-filters {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: linear-gradient(180deg, rgba(255, 252, 247, 0.92), rgba(246, 242, 234, 0.9));
+}
+
+.filter-group {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.filter-label {
+  color: var(--accent);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.filter-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.filter-chip,
+.filter-reset {
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font: inherit;
+  cursor: pointer;
+}
+
+.filter-chip {
+  min-height: 2.1rem;
+  padding: 0.45rem 0.9rem;
+  background: rgba(21, 35, 33, 0.05);
+  color: var(--muted);
+  font-size: 0.92rem;
+  font-weight: 600;
+  transition: background 160ms ease, border-color 160ms ease, color 160ms ease;
+}
+
+.filter-chip.is-active {
+  border-color: rgba(30, 90, 82, 0.2);
+  background: rgba(30, 90, 82, 0.12);
+  color: var(--accent);
+}
+
+.filter-reset {
+  justify-self: start;
+  padding: 0.55rem 0.95rem;
+  background: transparent;
+  border-color: rgba(21, 35, 33, 0.12);
+  color: var(--text);
+}
+
+.filter-chip:hover,
+.filter-chip:focus-visible,
+.filter-reset:hover,
+.filter-reset:focus-visible {
+  outline: none;
+  border-color: rgba(30, 90, 82, 0.24);
+}
+
 .post-card {
   transition: transform 180ms ease, border-color 180ms ease;
 }
@@ -382,9 +451,66 @@ img {
   border-color: rgba(30, 90, 82, 0.24);
 }
 
+.post-summary,
+.lede {
+  margin-top: 1rem;
+  padding: 1rem 1.1rem;
+  border-left: 3px solid rgba(30, 90, 82, 0.35);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  background: linear-gradient(90deg, rgba(30, 90, 82, 0.08), rgba(30, 90, 82, 0.02));
+  color: var(--text);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
 .post-header,
 .resume-header {
   margin-bottom: 2rem;
+}
+
+.post-taxonomy-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+
+.post-taxonomy-label,
+.post-taxonomy-chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 1.8rem;
+  padding: 0.24rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.post-taxonomy-label {
+  color: var(--accent);
+  background: rgba(30, 90, 82, 0.12);
+}
+
+.post-taxonomy-chip {
+  color: var(--muted);
+  background: rgba(21, 35, 33, 0.05);
+}
+
+.post-empty-state {
+  padding: 1.5rem;
+  border: 1px dashed rgba(21, 35, 33, 0.16);
+  border-radius: var(--radius-md);
+  background: rgba(255, 252, 247, 0.72);
+}
+
+.post-empty-state h3,
+.post-empty-state p {
+  margin: 0;
+}
+
+.post-empty-state p {
+  margin-top: 0.55rem;
+  color: var(--muted);
 }
 
 .post-header h1,

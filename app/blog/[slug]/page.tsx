@@ -26,6 +26,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${post.title} | Bingyong Cao`,
     description: post.summary,
+    keywords: post.keywords,
   };
 }
 
@@ -45,7 +46,17 @@ export default async function BlogPostPage({ params }: Props) {
         <div className="post-meta">
           <span>{post.date}</span>
           <span>{post.readingTime}</span>
+          {post.category ? <span className="post-taxonomy-label">{post.category}</span> : null}
         </div>
+        {post.keywords.length > 0 ? (
+          <div className="post-taxonomy-list" aria-label="Keywords">
+            {post.keywords.map((keyword) => (
+              <span key={keyword} className="post-taxonomy-chip">
+                {keyword}
+              </span>
+            ))}
+          </div>
+        ) : null}
         <p className="lede">{post.summary}</p>
       </header>
 

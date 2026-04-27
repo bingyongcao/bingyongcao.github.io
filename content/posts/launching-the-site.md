@@ -2,6 +2,11 @@
 title: "Launching a personal site that stays easy to maintain"
 summary: "Why this site uses markdown for writing and structured data for resume updates."
 date: "2026/4/13"
+category: "Site notes"
+keywords:
+  - markdown
+  - resume
+  - GitHub Pages
 ---
 
 This repository starts with a simple goal: make it easy to keep a professional site current.

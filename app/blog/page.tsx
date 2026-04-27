@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
 
+import BlogFilterList from './blog-filter-list';
 import { getAllPosts } from '../../lib/posts';
 
 export const metadata: Metadata = {
@@ -17,18 +17,7 @@ export default function BlogPage() {
         <div className="eyebrow">Blog</div>
       </header>
 
-      <div className="post-list">
-        {posts.map((post) => (
-          <Link key={post.slug} href={`/blog/${post.slug}`} className="post-card">
-            <div className="meta-row">
-              <span>{post.date}</span>
-              <span>{post.readingTime}</span>
-            </div>
-            <h3>{post.title}</h3>
-            <p>{post.summary}</p>
-          </Link>
-        ))}
-      </div>
+      <BlogFilterList posts={posts} />
     </section>
   );
 }
