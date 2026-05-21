@@ -585,11 +585,15 @@ img {
   margin-bottom: 0.5rem;
 }
 
-.post-body p:has(> img) + p {
+.post-body p:has(> img) + p:has(> em:only-child) {
   margin-top: 0;
   color: var(--muted);
   font-size: 0.94rem;
   text-align: center;
+}
+
+.post-body p:has(> img) + p:has(> em:only-child) > em {
+  font-style: normal;
 }
 
 .resume-layout {

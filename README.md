@@ -46,14 +46,14 @@ keywords:
 
 1. Put the image file in `public/posts/`, for example `public/posts/model-review.png`.
 2. Reference it in the markdown post with an absolute path starting from `/posts/`.
-3. Add a normal paragraph immediately below the image to use it as the image description or caption.
+3. Add caption below the image with `*xxx*`.
 
 Example:
 
-```md
-![test](/posts/pexels-nano71-31264085.jpg)
+```text
+![search and summary task](/posts/example.png)
 
-[源自Pexels Hao Liang](https://www.pexels.com/zh-cn/photo/31264085/)
+*This is the image caption.*
 ```
 
 Notes:
