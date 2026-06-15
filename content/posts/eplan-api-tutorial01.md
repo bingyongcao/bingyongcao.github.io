@@ -1,5 +1,5 @@
 ---
-title: "EPLAN二次开发教程-01前期准备"
+title: "EPLAN二次开发教程01-离线帮助文档"
 summary: ""
 date: "2026/6/7"
 category: "EPLAN"
@@ -8,7 +8,13 @@ keywords:
   - 教程
 ---
 
+前期准备
+
 下载并安装 Eplan 和 visual studio，本教程基于Eplan 2026 和 visual studio 2022 community
+
+任何二次开发项目都需要
+
+[在线API帮助文档](https://www.eplan.help/en-us/Infoportal/Content/api/2026/index.html)
 
 ![](../../public/posts/eplan_tutorial01/Snipaste_2026-06-05_10-49-54.png)
 
